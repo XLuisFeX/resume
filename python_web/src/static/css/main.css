@@ -11,3 +11,14 @@ body {
     #43c6ac
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+#form {
+  background: white;
+  padding: 2% 2% 2% 2%;
+  /* the border will curve into a 'D' */
+  border-radius: 10px;
+}
+
+#welcome_messege {
+  padding-top: 5%;
+}
