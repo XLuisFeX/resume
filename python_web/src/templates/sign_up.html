@@ -6,7 +6,7 @@
       <h1>Sign up</h1>
       <hr />
 
-      <form action="/form" method="POST">
+      <form action="/signup" method="POST">
         <div class="form-group">
           <label>Username</label>
           <input
@@ -45,7 +45,16 @@
     </div>
   </div>
   {% if message %}
-  <p id="welcome_messege">{{ message }}</p>
+  <div
+    id="welcome_messege"
+    class="alert alert-warning alert-dismissible fade show"
+    role="alert"
+  >
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
   {% endif %}
 </div>
 
