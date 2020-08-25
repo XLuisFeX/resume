@@ -17,14 +17,15 @@ def us():
 
 @app.route("/signup", methods=["GET", "POST"])
 def sign_up():
-    username=False
     if request.method == 'POST':
         username = request.form.get('username')
         email = request.form.get('email')
         password = request.form.get('password')
         message = "Welcome: " + username
-    if username:
-        return render_template('sign_up.html', message=message)
+        if (username and email and password):
+            return render_template('sign_up.html', message=message)
+        else:
+            return render_template('sign_up.html', message="Please fill all the fields")
     else:
         return render_template('sign_up.html')
 
