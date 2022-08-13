@@ -93,7 +93,7 @@ points = [] #List to append point to draw
 color_var = None #Color code of point to draw
 color_name='' #Color name of point to draw
 
-#Initialize hand detecto class
+#Initialize hand detector class
 handDetector = HandDetector(min_detection_confidence=0.7)
 
 #Run code until 'q' key is pressed or close hand gesture detected
@@ -133,7 +133,7 @@ while True:
         y=R_handLandmarks[8][2]
         points.append([x,y,color_var,color_name]) #Append x and y coordinate of right hand index, with color
         
-    #Hands gesture to delect all point in screen
+    #Hands gesture to delete all points in screen
     if(R_fingers==[1, 1, 1, 1, 1] and L_fingers==[1, 1, 1, 1, 1]):
         points = []
        
